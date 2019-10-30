@@ -1,6 +1,7 @@
-Generate Contract Wrapper in Java
+Generate Contract Wrapper in Java can be done with two different ways
 ----------------------------------------------------------------------------------
-
+A) MANUAL WRAPPER GENERATOR
+-------------------------
 Step 1:
 Compile and generate bin and abi files (we are using "--overwrite" if directory has same name classes then regenerate and over write them):
 ------------------------------------------
@@ -16,33 +17,13 @@ D:\piiVerificationProject\ServersideAPP> "./tools/web3j-4.5.0/bin/web3j.bat" "so
 ./target/AuthorizedPII.abi" "-o" "./src/java/" "-p" "com.farhan.piiverification.blockchain.contracts.AuthorizedPII_v1"
 
 
+B) AUTOMATIC WRAPPER GENERATOR
+----------------------------
+
+> Use contract-wrapper-gen.cmd file and it will generate the contracts.
 
 ---------------------------------------------------------------------------------------------------
-
-
-By watching this help video: https://www.youtube.com/watch?v=9p2ah3BBGLk&list=PLD_n_feSn9l3QoqgK4tmoWFda3ATglvwC&index=13
-
-I have finally able to connect with ropsten network by using remix editor and by using solidity contract.
-Then through metamask i have deployed or paid the money to be added on the network and below is the
-transaction for a new contract. ( Make sure to select the injected in the environment and ropsten in the metamask to properly connect each other)
-
-If you have no ether then try to use deposit and go with faucet and then click 1 ether.
-
-https://ropsten.etherscan.io/tx/0xacefb5761fd370af550f67976d3f12dbcf0a8268decd4f8ed78304d3a04481d0
-
-My contract address for the new identityv2 class is https://ropsten.etherscan.io/tx/0xacefb5761fd370af550f67976d3f12dbcf0a8268decd4f8ed78304d3a04481d0
-contract address: 0x87e832fd0abd6fc5274a8b3f0613c2b7a7da6b9d
-
-My MetaMask that I have used with the account is
-
-Network: Ropsten
-Account address: 0x851401f0e71ae1Cc27616B6eb985A97162001936
-Key: 7BFE6EF6AE02D2818D5A6E5D1A40B1AFAC9C73A7EEAB696B6778DCD554867932
-
-The above ids i can use for the addtransaction since the owner on that machine is this guy.
-
-I have also verified my code on the web  so anyone can see code and other details.
-https://ropsten.etherscan.io/address/0x87e832fd0abd6fc5274a8b3f0613c2b7a7da6b9d#code
+Useful Link: https://www.youtube.com/watch?v=9p2ah3BBGLk&list=PLD_n_feSn9l3QoqgK4tmoWFda3ATglvwC&index=13
 
 Connecting MetaMask:
 ====================
@@ -53,10 +34,10 @@ in nodejs .
 1- Create a folder like i did in main\nodejs\src\ and create one index.js and then on command prompt and do cd.. to go one step back
 and then install webpack as below
 
-D:\WORK\cryptocurrency and blockchain\bcidentity\src\main\nodejs>npm install webpack webpack-cli webpack-dev-server --save-dev
+nodejs>npm install webpack webpack-cli webpack-dev-server --save-dev
 
 2 - On command prompt write
-D:\WORK\cryptocurrency and blockchain\bcidentity\src\main\nodejs>npx webpack-dev-server --https
+nodejs>npx webpack-dev-server --https
 
 and it will create a certificate for your nodejs server
 

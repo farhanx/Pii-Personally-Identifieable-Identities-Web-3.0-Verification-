@@ -52,8 +52,10 @@ Step 3: Now run IPFS daemon
 
 IPFS is used for retrieving the user photos ,therefore, make sure to run ipfs daemon. 
 
+
 `  > ipfs daemon
 `
+
 The nodejs application is using IPFS CDN libraries using 
 
     <script src="https://unpkg.com/ipfs-http-client@39.0.2/dist/index.min.js" integrity="sha384-DUTAjqwwqxmoFuDozFeVvanWVA8QQBYyGSq4MQOlBxH03rqD4yyaSl43RQHU5E8d" crossorigin="anonymous"></script><!-- loading the human-readable (not minified) version -->
