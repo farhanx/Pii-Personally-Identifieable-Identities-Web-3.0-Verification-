@@ -31,16 +31,24 @@ So the organization can incorporate this DAPP with its system, which allows them
 
 **How to Run** 
 
-Step 1: On command line call following command 
+Step 0: Go to the the command line and visit the following path (src folder) here we have to get all node modules.
 
-` ClientDAPP/src/nodejs> npx webpack-dev-server --https --port 80
-` 
+    ClientDAPP/src> 
+
+Step 1: Now write the below command to install webpack node modules 
+
+    npm install webpack webpack-cli webpack-dev-server --save-dev
+
+Step 2: On command line go to the nodejs folder and write following command to run a development server  
+
+    ClientDAPP/src/nodejs> npx webpack-dev-server --https --port 80
+
  
- On a successful compilation it will allow you to access (MAKE SURE TO PUT HTTPS)
+On a successful compilation it will allow you to access the below url. **(MAKE SURE TO PUT HTTPS)**
  
 https://localhost:80/
 
-Step 2: Make sure to run IPFS daemon 
+Step 3: Now run IPFS daemon 
 
 IPFS is used for retrieving the user photos ,therefore, make sure to run ipfs daemon. 
 
@@ -48,10 +56,10 @@ IPFS is used for retrieving the user photos ,therefore, make sure to run ipfs da
 `
 The nodejs application is using IPFS CDN libraries using 
 
-`  <script src="https://unpkg.com/ipfs-http-client@39.0.2/dist/index.min.js" integrity="sha384-DUTAjqwwqxmoFuDozFeVvanWVA8QQBYyGSq4MQOlBxH03rqD4yyaSl43RQHU5E8d" crossorigin="anonymous"></script><!-- loading the human-readable (not minified) version -->
-`
-`  <script src="https://unpkg.com/ipfs-http-client@39.0.2/dist/index.js" integrity="sha384-SbtgpGuHo4HmMg8ZeX2IrF1c4cDnmBTsW84gipxDCzeFhIZaisgrVQbn3WUQsd0e" crossorigin="anonymous"></script>
-`
+    <script src="https://unpkg.com/ipfs-http-client@39.0.2/dist/index.min.js" integrity="sha384-DUTAjqwwqxmoFuDozFeVvanWVA8QQBYyGSq4MQOlBxH03rqD4yyaSl43RQHU5E8d" crossorigin="anonymous"></script><!-- loading the human-readable (not minified) version -->
+
+    <script src="https://unpkg.com/ipfs-http-client@39.0.2/dist/index.js" integrity="sha384-SbtgpGuHo4HmMg8ZeX2IrF1c4cDnmBTsW84gipxDCzeFhIZaisgrVQbn3WUQsd0e" crossorigin="anonymous"></script>
+
 
 
 
