@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ece8fe94-09ce-4728-a820-91bffb4fefa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientDAPP/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ClientDAPP/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServersideAPP/readme-farhan" beforeDir="false" afterPath="$PROJECT_DIR$/ServersideAPP/readme-farhan" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/ServersideAPP/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -238,30 +236,19 @@
             <path>
               <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientDAPP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientDAPP" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientDAPP" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="nodejs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
-              <item name="EthereumContracts" type="462c0819:PsiDirectoryNode" />
+              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
               <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -276,7 +263,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572468065712" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572468241669" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -328,7 +315,7 @@
       <workItem from="1571506768802" duration="13661000" />
       <workItem from="1571635595830" duration="78069000" />
       <workItem from="1572040175583" duration="78142000" />
-      <workItem from="1572374222820" duration="38249000" />
+      <workItem from="1572374222820" duration="38496000" />
     </task>
     <task id="LOCAL-00001" summary="Readme file change">
       <created>1572466605084</created>
@@ -351,15 +338,28 @@
       <option name="project" value="LOCAL" />
       <updated>1572467458705</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Readme file change">
+      <created>1572467990579</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572467990579</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Readme file change">
+      <created>1572468127985</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572468127985</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208121000" />
+    <option name="totallyTimeSpent" value="208368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23138833" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
