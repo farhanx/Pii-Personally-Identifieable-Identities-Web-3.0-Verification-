@@ -1,3 +1,97 @@
+
+#### 1 - EthereumContracts  ( Truffle Project )
+
+
+**Technical Reuirement**
+
+    1 - Truffle version v5.0.8
+    
+    2 - OS Windows 10 (Or Ubuntu latest version)
+
+**How to Run** 
+
+Step 1: Open the terminal and go to the truffle project 
+
+`  EthereumContract/src/
+`
+Step 2: Open the truffle session
+
+`  EthereumContract/src/> truffle develop
+` 
+Step 3: Migrate all the contracts
+
+`  EthereumContract/src/> migrate
+` 
+
+Step 4: Test all the contracts
+
+`  EthereumContract/src/> test
+` 
+
+**Description:**
+
+This project has the regular truffle project directories inside EthereumContracts/src/
+
+All the contracts are exist inside contract directory , tests are inside test directory and migration scripts are inside migrations directory.
+
+**Smart Contracts**  
+
+There are five contracts inside 
+
+1 - AuthorizedPII : main operational contract (Inherted from SecurityRestrictions)
+
+2 - SecurityRestriction : It restricts the functionality with security patterns (Inherited from Ownable)
+
+3 - Ownable : It has all the ownership admin functionality
+
+4 - Migration : Default migration contract
+
+5 - AuthorizedRegistry : This contract is a registry contract to track and control upgrades. Additionally, To get the latest version of AuthorizedPII 
+
+**Test Cases**
+
+    Test 0 : Get the latest version and address of the contract using registry
+    
+    Test 1 : Upgrade the contract version and check its value
+    
+    Test 2 : Contract owner must be able to transfer his ownership to new contract owner or admin
+    
+    Test 3: Other than admin no one should able to call the restricted AddTransaction function 
+    
+    Test 4: New PII data can only be set by the current contract admin
+    
+    Test 5: Verify if previously stored PII data is correct with respect to the registered user address 
+    
+    Test 6: Verify if no one can query someone else PII data 
+    
+    Test 7: Check existing balance by the admin function 
+    
+    Test 8: Withdraw all the collected fees in admin account
+    
+    Test 9: Contract should only be killed by the owner of the contract
+    
+    Test 10: No public function should return any output, since contract is killed. 
+
+**Live Contracts**  
+
+Following two contracts are live on the Ropsten network.
+
+AuthorityRegistry Contract :
+
+The Ethereum Naming Service is uses to resolve registry contract "AuthorityRegistry" on the Ropsten Network. 
+
+The ens domain is **piiauthority.eth** which resolves the AuthorityRegistry address on 
+
+https://ropsten.etherscan.io/address/0x74dc431a15d82837ed637f63f5844df68d5d3d00
+
+AuthorityPii Contract:
+
+This is the main contract which records all the data and provide operational services like adding transaction and retrieve transaction.
+
+https://ropsten.etherscan.io/address/0xa3aa160c14fe9ed2978f986ce6be90cb2e5ff3aa
+
+**Truffle Commands Help**
+
 To run development evenviornment  
  > truffle develop
  
