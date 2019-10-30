@@ -1,0 +1,39 @@
+<svg width="80px"  height="80px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-stripe" style="background: none;">
+    <defs>
+      <mask ng-attr-id="{{config.mid}}" id="lds-flat-progress-bar-mask-58efce97d174c">
+        <circle cx="50" cy="50" r="45" fill="#fff"></circle>
+      </mask>
+      <pattern ng-attr-id="{{config.patid}}" patternUnits="userSpaceOnUse" x="0" y="0" width="100" height="100" id="lds-stripe-patid-128b7fa7b925">
+        <g transform="translate(21.2333 0)">
+          <g transform="rotate(20 50 50) scale(1.2)">
+            <rect x="-20" y="-10" width="10" height="120" ng-attr-fill="{{config.c1}}" fill="#f08d43"></rect>
+            <rect x="-10" y="-10" width="10" height="120" ng-attr-fill="{{config.c2}}" fill="#f6eddc"></rect>
+            <rect x="0" y="-10" width="10" height="120" ng-attr-fill="{{config.c1}}" fill="#f08d43"></rect>
+            <rect x="10" y="-10" width="10" height="120" ng-attr-fill="{{config.c2}}" fill="#f6eddc"></rect>
+            <rect x="20" y="-10" width="10" height="120" ng-attr-fill="{{config.c1}}" fill="#f08d43"></rect>
+            <rect x="30" y="-10" width="10" height="120" ng-attr-fill="{{config.c2}}" fill="#f6eddc"></rect>
+            <rect x="40" y="-10" width="10" height="120" ng-attr-fill="{{config.c1}}" fill="#f08d43"></rect>
+            <rect x="50" y="-10" width="10" height="120" ng-attr-fill="{{config.c2}}" fill="#f6eddc"></rect>
+            <rect x="60" y="-10" width="10" height="120" ng-attr-fill="{{config.c1}}" fill="#f08d43"></rect>
+            <rect x="70" y="-10" width="10" height="120" ng-attr-fill="{{config.c2}}" fill="#f6eddc"></rect>
+            <rect x="80" y="-10" width="10" height="120" ng-attr-fill="{{config.c1}}" fill="#f08d43"></rect>
+            <rect x="90" y="-10" width="10" height="120" ng-attr-fill="{{config.c2}}" fill="#f6eddc"></rect>
+            <rect x="100" y="-10" width="10" height="120" ng-attr-fill="{{config.c1}}" fill="#f08d43"></rect>
+            <rect x="110" y="-10" width="10" height="120" ng-attr-fill="{{config.c1}}" fill="#f08d43"></rect>
+          </g>
+          <animateTransform attributeName="transform" type="translate" values="0 0;26 0" keyTimes="0;1" ng-attr-dur="{{config.speed}}s" repeatCount="indefinite" dur="1s"></animateTransform>
+        </g>
+      </pattern>
+    </defs>
+    <circle cx="50" cy="50" r="45" ng-attr-fill="{{config.base}}" fill="#ab2f0c"></circle>
+    <g ng-attr-mask="url(#{{config.mid}})" mask="url(#lds-flat-progress-bar-mask-58efce97d174c)">
+      <g transform="translate(50 50)">
+        <g transform="scale(0.8)">
+          <g transform="translate(-50 -50)">
+            <path ng-attr-d="{{config.d}}" ng-attr-fill="{{config.dark}}" d="M 13.80761184457488 59.19238815542512 L 86.19238815542512 40.80761184457488 L 186.19238815542514 140.80761184457486 L 113.80761184457488 159.19238815542514 Z" fill="rgb(138, 38, 10)"></path>
+            <rect ng-attr-rx="{{config.r}}" ng-attr-ry="{{config.r}}" ng-attr-x="{{config.x}}" ng-attr-y="{{config.y}}" ng-attr-stroke="{{config.stroke}}" stroke-width="0" ng-attr-width="{{config.width}}" ng-attr-height="{{config.height}}" ng-attr-fill="url(#{{config.patid}})" rx="13" ry="13" x="10" y="37" width="80" height="26" fill="url(#lds-stripe-patid-128b7fa7b925)"></rect>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>

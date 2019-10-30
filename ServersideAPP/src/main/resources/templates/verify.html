@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+<p>
+
+
+
+<form action="/verifysubmit" method="post">
+    What would you like to verify ?
+
+    <br>
+    <select name="target" id="target">
+        <option value="">Select Option to Verify</option>
+        <option value="name">Name</option>
+        <option value="age">Age</option>
+        <option value="address">Address</option>
+    </select>
+    <br>
+    <div id="name" >
+        Full Name:<br>
+        <input type="text" name="name" value="" id="name-field"/><br>
+    </div>
+    <div id="age">
+        Age:<br>
+        <input type="text" name="age" value="" id="age-field"/><br><br>
+    </div>
+    <div id="address">
+        Address:<br>
+        <input type="text" name="address" value="" id="address-field"/><br><br>
+    </div>
+
+    <div>
+        Wallet:<br>
+        <input type="text" name="wallet" value="" id="wallet" /><br><br>
+
+        Key:<br>
+        <input type="text" name="privatekey" value="" id="key"/><br><br>
+    </div>
+
+    <input type="submit" value="Submit">
+</form>
+
+
+<script>
+    $("#target").change(function () {
+
+        var end = this.value;
+
+        if(end=="name")
+        {
+            $("#name").show();
+            $("#age").hide();
+            $("#address").hide();
+            $("#name_field").val("");
+
+        }
+        else
+        if(end=="age")
+        {
+            $("#name").hide();
+            $("#age").show();
+            $("#address").hide();
+            $("#age_field").val("");
+
+        }
+        else
+        if(end=="address")
+        {
+
+            $("#name").hide();
+            $("#age").hide();
+            $("#address").show();
+            $("#address_field").val("");
+        }
+
+
+    });
+
+    $(document).ready(function(){
+        $("#name").hide();
+        $("#age").hide();
+        $("#address").hide();
+    });
+
+</script>
+
+</body>
+</html>

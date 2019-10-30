@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Simple Identity Verification</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Farhan's Demo for the Blockchain Identity Verification">
+    <meta name="author" content="Farhan">
+
+    <!-- Custom fonts for this theme -->
+    <link th:href="@{/newtheme/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link th:href="@{/newtheme/css/freelancer.min.css}" rel="stylesheet">
+
+</head>
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+        <img class="mb-2" th:src="@{/newtheme/img/farhan-logo.png}" alt="" width="4%">
+
+        <a class="navbar-brand js-scroll-trigger small" href="#page-top">APP By Farhan H Khan</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Masthead -->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+
+        <!-- Masthead Heading -->
+        <h5 class="text-uppercase mb-0">PII DATA VERIFICATION ON PUBLIC BLOCKCHAIN</h5>
+        <br>
+        <!-- Masthead Subheading -->
+        <p class="masthead-subheading font-weight-light mb-0">
+            A demo to show how a user can prove his Pii data which is registered by an authority and can only be called by the referenced user.
+        </p>
+    </div>
+</header>
+
+<!-- Portfolio Section -->
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+        <!-- Portfolio Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Introduction</h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <!-- Portfolio Grid Items -->
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <p> This is a demo how an authority can control user registration. Where user registration will be stored on the
+                    public blockchain network (Ethereum). All the Pii data will be stored in shape of irreversible hashes.
+                    User can prove his Pii attribute by using MetaMask on the verification page.
+                </p>
+                <p>
+                    Step 1: Register the user PII data using below form.
+                    Step 2: Make sure to provide a proper user account address for whome you are entering data.
+                    Step 3: Once the transaction gets approved , check or verify this data on 3rd party DAPP. By using Metamask.
+                </p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <p class="text-break text-wrap">
+                    The public Ropsten network contract is : https://ropsten.etherscan.io/address/0x87e832fd0abd6fc5274a8b3f0613c2b7a7da6b9d
+                </p>
+            </div>
+            <div class="col-md-6 col-lg-4" style="background:#d4eaff;">
+                <div>
+                    <b>Network:</b> <span id="networktype" style="color: blue;" th:text="${networktype}"> Network Type </span>
+                    <div>
+                        <b>Authority PII Contract Address:</b>
+                        <input class="form-control" type="text" value="" id="contract-address" name="contract-address" th:value="${primaryContractAddress}">
+                        <p class="small"> The AuthorityPII Contract is the main contract with functionality and storage. </p>
+                    </div>
+                    <div>
+                        <b>Authority Registry Contract Address:</b>
+                        <input class="form-control" type="text" value="" id="registry-contract-address" name="registry-contract-address" th:value="${registryContractAddress}" >
+                        <p class="small"> Registry contract contains the latest version of the AuthorityPII contract.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-1 p-4  mx-auto">
+            <h2>Enter Pii Data Of The User</h2>
+
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <form enctype="multipart/form-data" action="/identitycheck" method="post" novalidate="novalidate" id="myform" >
+                <div class="control-group small">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Full Name</label>
+                        <input class="form-control" name="name" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your Full name.">
+
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Home Address</label>
+                        <input class="form-control" name="address" id="address" type="text" placeholder="Home Address" required="required" data-validation-required-message="Please enter your Home address.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Age</label>
+                        <input class="form-control" name="age" id="age" type="text" placeholder="Age" required="required" data-validation-required-message="Please enter your Age.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Photo Image</label>
+                        <input type="file" accept=".jpg,.jpeg" class="form-control" name="photo" id="photo"  placeholder="photo" required="required" data-validation-required-message="Please select your photo.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Wallet or Account</label>
+                        <input class="form-control" name ="wallet" id="wallet" rows="5" placeholder="Account/Wallet" required="required" data-validation-required-message="Please enter a wallet."/>
+
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="form-group">
+                    <button onclick="submitcall2();"  type="button" class="btn btn-secondary btn-xl" id="sendTransactionButton">Send now</button>
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<!-- Farhans functions START-->
+
+    <script type="text/javascript">
+
+            function submitcall2()
+            {
+
+
+                // e.preventDefault();
+                //Disable submit button
+                $(this).prop('disabled',true);
+
+                var form = document.forms[0];
+                var formData = new FormData(form);
+
+               // alert(formData.has("age"));
+
+                // Ajax call for file uploaling
+                var ajaxReq = $.ajax({
+                    url : '/identityadd',
+                    type : 'POST',
+                    data : formData,
+                    cache : false,
+                    contentType : false,
+                    processData : false,
+                    dataType : 'json',
+                    xhr: function(){
+                        //Get XmlHttpRequest object
+                        var xhr = $.ajaxSettings.xhr() ;
+
+                        //Set onprogress event handler
+                        xhr.upload.onprogress = function(event){
+                            var perc = Math.round((event.loaded / event.total) * 100);
+                            //$('#progressBar').text(perc + '%');
+                           // $('#progressBar').css('width',perc + '%');
+
+                        };
+                        return xhr ;
+                    },
+                    beforeSend: function( xhr ) {
+                        //Reset alert message and progress bar
+                       // $('#alertMsg').text('');
+                       // $('#progressBar').text('');
+                       // $('#progressBar').css('width','0%');
+                        $("#failed_alert").hide();
+                        $("#passed_alert").hide();
+                        $("#progress").show();
+                        $('#portfolioModal4').modal('toggle');
+                    }
+                });
+
+                // Called on success of file upload
+                ajaxReq.done(function(msg) {
+                    // log data to the console so we can see
+                    console.log(msg);
+
+                    $("#progress").hide();
+
+                    var obj = msg;
+
+                    if(obj.code==1);
+                    {
+                        $("#failed_alert").hide();
+                        $("#passed_alert").show();
+                        $("#status_message").text(obj.status);
+                        $("#contract_address").text(obj.contract_address);
+                        // alert(obj.contract_address);
+                        $("#transaction_hash").text(obj.status);
+
+                    }
+
+                    if(obj.code==0)
+                    {
+                        $("#passed_alert").hide();
+                        $("#failed_alert").show();
+                        $("#status_message").text(obj.status);
+                        $("#failed_status").text(obj.status)
+
+                    }
+
+                });
+
+                // Called on failure of file upload
+                ajaxReq.fail(function(jqXHR) {
+                    $('#alertMsg').text(jqXHR.responseText+'('+jqXHR.status+
+                        ' - '+jqXHR.statusText+')');
+                    $('button[type=submit]').prop('disabled',false);
+                });
+            }
+</script>
+
+<!-- Farhans functions END-->
+
+<!-- Info Section -->
+<section class="page-section" id="contact">
+    <div class="container">
+        <!-- Info Section Form -->
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+
+            <!-- Footer Location -->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Demo By</h4>
+                <p class="lead mb-0">Farhan Hameed Khan
+                </p>
+            </div>
+
+            <!--  -->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Around the Web</h4>
+                <a class="btn btn-outline-light btn-social mx-1" href="#">
+                    <i class="fab fa-fw fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#">
+                    <i class="fab fa-fw fa-twitter"></i>
+                </a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#">
+                    <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#">
+                    <i class="fab fa-fw fa-dribbble"></i>
+                </a>
+            </div>
+
+            <!-- Footer About Text -->
+            <div class="col-lg-4">
+                <h4 class="text-uppercase mb-4">About Identity Demo</h4>
+                <p class="lead mb-0">Free to use for demo purpose only
+                    <a href="https://ropsten.etherscan.io/address/0x87e832fd0abd6fc5274a8b3f0613c2b7a7da6b9d#code">My Public Smart Contract</a>.</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- Copyright Section -->
+<section class="copyright py-4 text-center text-white">
+    <div class="container">
+        <small>Copyright &copy; Farhan Hameed Khan 2019</small>
+    </div>
+</section>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+<!-- Portfolio Modals -->
+
+<!-- Portfolio Modal 4 START-->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <!-- Portfolio Modal - Title -->
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">IDENTITY TRANSACTION STATUS</h2>
+                            <!-- Icon Divider -->
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <!-- Portfolio Modal - Image -->
+                            <img class="img-fluid rounded mb-5" th:src="@{/newtheme/img/progress.gif}" alt="" id="progress">
+                            <!-- Portfolio Modal - Text -->
+                            <p class="mb-5">
+
+                                This result is coming from the blockchain smart-contract through Authority Server.
+                                <span id="status_message">
+
+                                </span>
+
+                                <div id="passed_alert" class="alert alert-success" role="alert">
+                                    <strong>Well done!</strong> You successfully added a new identity on the public blockchain.
+                                    <strong>Your Transaction hash is: <span id="transaction_hash"></span> </strong>
+                                     Contract Address : <span id="contract_address" ></span>
+                                </div>
+
+                                <div id="failed_alert" class="alert alert-danger" role="alert">
+                                    <strong>Something wrong!</strong> Check if you have sent all Pii data..
+                                    <strong>The problem or issue is: <span id="failed_status"></span> </strong>
+                                </div>
+
+                            </p>
+                            <button class="btn btn-primary" href="#" data-dismiss="modal">
+                                <i class="fas fa-times fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio Modal 4 END-->
+
+
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script th:src="@{newtheme/vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{newtheme/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+<!-- Plugin JavaScript -->
+<script th:src="@{newtheme/vendor/jquery-easing/jquery.easing.min.js}"></script>
+
+<!-- Contact Form JavaScript -->
+<script th:src="@{newtheme/js/jqBootstrapValidation.js}"></script>
+<script th:src="@{newtheme/js/contact_me.js}"></script>
+
+<!-- Custom scripts for this template -->
+<script th:src="@{newtheme/js/freelancer.min.js}"></script>
+
+</body>
+</html>

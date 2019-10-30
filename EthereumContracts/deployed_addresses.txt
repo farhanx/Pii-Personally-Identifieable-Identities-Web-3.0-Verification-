@@ -1,0 +1,17 @@
+1) AuthorityPII Contract
+Ropsten Network Contract Address: 0xA3AA160c14fE9ed2978F986Ce6BE90cb2e5ff3AA
+Direct Etherscan link: https://ropsten.etherscan.io/address/0xa3aa160c14fe9ed2978f986ce6be90cb2e5ff3aa
+TX link: https://ropsten.etherscan.io/tx/0x3b0d916a641a1d341549aa06240a1f7cc3d5d20598005ea6ea02450b423ba41a
+Owner: 0x84d9e63Fc79cf5114F95aE09aAB760d594E3718B | PVTKey: E97F403B8F0408D6864171366FB5DE01662D60DA36098BC3A96B5184D9D0A22E
+Simple Tip: To test on the remix with ropsten - load the address and call getOwner(1) or any other function.
+
+2) AuthorizedRegistry Contract
+Ropsten Network Contract Address: 0x74DC431a15d82837ED637F63f5844DF68D5d3d00
+Direct Etherscan link: https://ropsten.etherscan.io/address/0x74dc431a15d82837ed637f63f5844df68d5d3d00
+TX link: https://ropsten.etherscan.io/tx/0x89a4f3a69a3eb33636ffe18f1936d780dc4df682d44e7e501cf967dcc4da6882
+Owner: 0x84d9e63Fc79cf5114F95aE09aAB760d594E3718B | PVTKey: E97F403B8F0408D6864171366FB5DE01662D60DA36098BC3A96B5184D9D0A22E
+Simple Tip: To test on the remix with ropsten - load the address and call getVersionDetailByNumber(1) or any other function.
+ENS NAME: piiauthority.eth (The registry address is resolved on piiauthority.eth name)
+Direct Link: https://app.ens.domains/name/piiauthority.eth
+
+

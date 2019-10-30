@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bcidentity:war">
+    <output-path>$PROJECT_DIR$/ServersideAPP/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>bcidentity</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="bcidentity-1.0.0.war">
+      <element id="artifact" artifact-name="bcidentity:war exploded" />
+    </root>
+  </artifact>
+</component>

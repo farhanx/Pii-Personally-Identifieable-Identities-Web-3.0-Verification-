@@ -1,0 +1,838 @@
+<html>
+<head>
+        <title>Simple Identity Verification</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Farhan's Demo for the Blockchain Identity Verification">
+        <meta name="author" content="Farhan">
+
+        <!-- Custom fonts for this theme -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="src/newtheme/css/freelancer.min.css" rel="stylesheet">
+    <script>
+
+
+        let contract; // main contract AuthorityPII
+        let registryContract; // registry contract AuthorityRegistry
+
+        // ABI source code for AuthorityRegistry contract
+        const registryAbi = [{"constant":true,"inputs":[],"name":"getLatestVersion","outputs":[{"internalType":"address","name":"contract_Address","type":"address"},{"internalType":"uint256","name":"version_number","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"version_number","type":"uint256"}],"name":"getVersionByNumber","outputs":[{"internalType":"address","name":"","type":"address"},{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"contractHasVersionInfo","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_versionName","type":"string"},{"internalType":"address","name":"_contractAddress","type":"address"}],"name":"addLatestVersion","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_versionName","type":"string"},{"internalType":"address","name":"_contractAddress","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"}],"name":"OwnershipRenounced","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"}];
+
+        // ABI source code for AuthorityPII contract
+        const mainContractabi = [{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"paymentRecordsByAddresses","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_identityaddress","type":"address"}],"name":"getAge","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[],"name":"toggle_active","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"_identityaddress","type":"address"}],"name":"getPhoto","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_identityaddress","type":"address"}],"name":"getName","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_homeaddress","type":"string"},{"internalType":"string","name":"_age","type":"string"},{"internalType":"string","name":"_ipfsPhoto","type":"string"},{"internalType":"address","name":"_identityaddress","type":"address"}],"name":"addTransaction","outputs":[{"internalType":"uint256","name":"transactionId","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getTotalPaymentRecieve","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getOwner","outputs":[{"internalType":"address","name":"ret","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getTest","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_identityaddress","type":"address"}],"name":"getAddress","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"circuit_breaker","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"transactionid","type":"uint256"}],"name":"SubmissionEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"name","type":"string"}],"name":"NameEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"homeaddress","type":"string"}],"name":"AddressEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"age","type":"string"}],"name":"AgeEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"},{"indexed":false,"internalType":"address","name":"to","type":"address"}],"name":"WithdrawalEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"}],"name":"OwnershipRenounced","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"}];//[{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"paymentRecordsByAddresses","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_identityaddress","type":"address"}],"name":"getAge","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[],"name":"toggle_active","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_identityaddress","type":"address"}],"name":"getName","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_homeaddress","type":"string"},{"internalType":"string","name":"_age","type":"string"},{"internalType":"address","name":"_identityaddress","type":"address"}],"name":"addTransaction","outputs":[{"internalType":"uint256","name":"transactionId","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getTotalPaymentRecieve","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getOwner","outputs":[{"internalType":"address","name":"ret","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_identityaddress","type":"address"}],"name":"getAddress","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"circuit_breaker","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"transactionid","type":"uint256"}],"name":"SubmissionEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"name","type":"string"}],"name":"NameEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"homeaddress","type":"string"}],"name":"AddressEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"age","type":"string"}],"name":"AgeEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"},{"indexed":false,"internalType":"address","name":"to","type":"address"}],"name":"WithdrawalEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"}],"name":"OwnershipRenounced","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"}];
+
+        // store current network contract address in the variable
+        let current_network_contract_address = "";
+
+        function getTruffleOrGanache_RegistryContractAddress()
+        {
+            // If you deploy a new contract on truffle or ganache then make sure to change the "AuthorityRegistry" contract address
+            // This contract must have one record which will point to the AuthorityPII contract for all kinds of operations and its version
+            return "0xe543f78dd8abefc9185c6dfa12ea79e7c63a3048";
+        }
+
+        function getRosptenENS_RegistryContractAddress(provider)
+        {
+            // This is an under construction function , in future we will be getting address name from ENS
+            // right now we are returning back registryContract manually
+            // 0x74DC431a15d82837ED637F63f5844DF68D5d3d00 = piiauthority.eth
+
+            $("#registry-contract-ens").val("piiauthority.eth");
+
+            return "0x74DC431a15d82837ED637F63f5844DF68D5d3d00";
+        }
+
+        function loadContracts(registryContractAddress)
+        {
+            console.log("Load AuthorityRegistry Contract : Recieved Address: "+registryContractAddress);
+            // registry contract is the one that will bring the latest version of our operational contract "AuthortyPII"
+            registryContract = web3.eth.contract(registryAbi).at(registryContractAddress);
+
+            registryContract.getLatestVersion(function(err, result)
+            {
+                if(result)
+                {
+                    console.log("Calling AuthorityRegistry function getLatestVersion() result: "+JSON.stringify(result));
+
+                    if(result[0].length>=40)
+                    {
+                        console.log("Received: AuthorityPII Contract version: "+result[1]+" AuthorityPII Contract Address :"+result[0]);
+                        // assing the contract address of AuthorityPII
+                        current_network_contract_address = result[0];
+
+                     //   alert(current_network_contract_address);
+
+                        // this is the main contract for PII data transactions
+                        contract = web3.eth.contract(mainContractabi).at(current_network_contract_address);
+                        $("#wallet").val(web3.eth.defaultAccount);
+                        $("#contract-address").val(current_network_contract_address);
+                        $("#registry-contract-address").val(registryContractAddress);
+                    }
+                    else
+                    {
+                        console.log("It seems like there is no contract address added by the authority inside registry contract "+result[0]);
+                    }
+                }
+
+                if(err)
+                {
+                    alert(err);
+                    console.log("version "+JSON.stringify(err));
+                }
+            });
+
+        }
+
+
+        function discoverBlockchainNetwork()
+        {
+            if(window.web3)
+            {
+                web3.version.getNetwork((err, netId) => {
+
+                    console.log("before call");
+
+                    if(netId) {
+                        // following are the netid for networks 1 = mainnet , 2 = morden , 3 = ropsten , 4 = rinkeby , 42 = kovan , 5777 = ganache or truffle
+                        let registryContractAddress = "";
+                        switch (netId) {
+                            case "3":
+                                console.log('This is the ropsten test network.');
+                                $("#networktype").text("Ropsten");
+
+                                registryContractAddress = getRosptenENS_RegistryContractAddress(web3.currentProvider);//ropsten_contract_address; // ropsten address come from ENS service
+                                loadContracts(registryContractAddress);
+                                //current_network_contract_address = ropsten_contract_address;
+                                break;
+                            case "5777":
+                                console.log('This is the Truffle or Ganache test network.');
+                                $("#networktype").text("Truffle or Ganache");
+                                registryContractAddress = getTruffleOrGanache_RegistryContractAddress();// truffle or ganache address should be pasted manually
+                                loadContracts(registryContractAddress);
+                                break;
+                            default:
+                                console.log('This is an unknown network.' + netId)
+                        }
+                    }
+
+                    if(err) { alert("Unable to discover the network" + err);}
+                    //contract = web3.eth.contract(mainContractabi).at(current_network_contract_address);
+                })
+            }
+        }
+
+        // This is a windows event whenever the page gets loaded it initiates the web3 object
+        // first it checks if the browser supports modern dapps using metamask otherwise it will go back to legacy technique
+        window.addEventListener('load', async () =>
+        {
+            setProgressBar(false);
+            // Modern dapp browsers...
+            if (window.ethereum)
+            {
+                window.web3 = new Web3(ethereum);
+                try
+                {
+                  // Request account access if needed
+                  await ethereum.enable();    // Acccounts now exposed
+
+                } catch (error) {
+                    alert("Denied access : User denied account access");
+                }
+            }
+            else if (window.web3)  // Legacy dapp browsers...
+            {
+                window.web3 = new Web3(web3.currentProvider);
+            }
+            else // Non-dapp browsers...
+            {
+                alert(" Your browser does not support WEB3 , download MetaMask to use this DAPP");
+                console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+            }
+
+            console.log("Discovering network ..");
+            discoverBlockchainNetwork();
+
+        }); //end of windows loading function
+
+
+        window.ethereum.on('accountsChanged', function (accounts) {
+            // Time to reload your interface with accounts[0]!
+            //alert(accounts);
+            refreshWallet(accounts);
+        });
+
+        // This is a function view who is the main owner of the contract , the function calls the contract function and get the
+        // account address whose it belongs to.
+        function getContractOwner()
+        {
+            contract.getOwner(function(err, result)
+            {
+               if(result)
+               {
+                   confirm("Successfully contract function is called and recieved: "+result);
+                   $("#contract-owner").text(result);
+               }
+
+               if(err)
+               {
+                   alert(err);
+                   $("#contract-owner").text(result);
+               }
+            });
+
+        }
+
+        function sendRequest(targetForApproval)
+        {
+            if(current_network_contract_address == "Enter AuthorizedPII Contract Address")
+            {
+                current_network_contract_address =  $("#contract-address").val();
+                if(current_network_contract_address == "Enter AuthorizedPII Contract Address") {
+                    alert("You have forgot enter truffle or ganache's smart contract address");
+                    return 0;
+                }
+            }
+
+            //if(targetForApproval.length==0) targetForApproval = $("#target").val();
+
+            let wallet = $("#wallet").val();
+            const fees = "1"; //remmember our attestation fees in the contract is 1 Ether
+            var weiValue = web3.toWei(fees,'ether'); // we cannot directly send numbers to the method we must convert to wei
+
+            console.log("Target for approval : "+targetForApproval+" using wallet "+wallet);
+
+            if(targetForApproval==="name")
+            {
+                getNameVerificationValue(wallet,weiValue);
+            }
+            else if(targetForApproval==="age")
+            {
+                getAgeVerificationValue(wallet,weiValue);
+            }
+            else if(targetForApproval==="address")
+            {
+                getHomeaddressVerificationValue(wallet,weiValue);
+            }
+            else if(targetForApproval==="photo")
+            {
+                getPhotoValue(wallet,weiValue);
+            }
+        }
+
+        // Contract PII based Functions
+
+        function getNameVerificationValue(wallet,weiValue)
+        {
+            contract.getName(wallet,{value:weiValue},function(err, result)
+                {
+                    console.log("getName Call successful ");
+
+                    if(err)
+                    {
+                        $("#message").text("Name is not verified");
+                        console.log("Error came - : "+JSON.stringify(err));
+                    }
+                    else if(result)
+                    {
+                        setProgressBar(true);
+                        setTransactionStatus(result,"Pending");
+                        console.log("transaction: "+ JSON.stringify(result));
+                        getNameEvent(result);
+
+                    }
+                }
+            );
+        }
+
+        function getAgeVerificationValue(wallet,weiValue)
+        {
+            contract.getAge(wallet,{value:weiValue},function(err, result)
+                {
+                    console.log("getAge Call successful ");
+
+                    if(err)
+                    {
+                        $("#message").text("Age is not verified");
+                        console.log("Error came - : "+JSON.stringify(err));
+                    }
+                    else if(result)
+                    {
+                        setProgressBar(true);
+                        setTransactionStatus(result,"Pending");
+                        console.log("transaction: "+ JSON.stringify(result));
+                        getAgeEvent(result);
+                    }
+                }
+            );
+        }
+
+        function getHomeaddressVerificationValue(wallet,weiValue)
+        {
+            contract.getAddress(wallet,{value:weiValue},function(err, result)
+                {
+                    console.log("getAge Call successful ");
+
+                    if(err)
+                    {
+                        $("#message").text("Address is not verified");
+                        console.log("Error came - : "+JSON.stringify(err));
+                    }
+                    else if(result)
+                    {
+                        setProgressBar(true);
+                        setTransactionStatus(result,"Pending");
+                        console.log("transaction: "+ JSON.stringify(result));
+                        getHomeaddressEvent(result);
+                    }
+                }
+            );
+        }
+
+        function getPhotoValue(wallet,weiValue)
+        {
+            contract.getPhoto(wallet,function(err, result)
+            {
+                if(result)
+                {
+                    $("#ipfsimage").show();
+                    console.log("transaction: "+ JSON.stringify(result));
+
+                    loadIPFSImage(result);
+                    $("#ipfs_image_msg").text("IPFS-CID: "+result).removeClass("alert-danger").addClass("alert-success");
+                }
+
+                if(err)
+                {
+                    $("#message").text("Address is not verified");
+                    console.log("Error came - : "+JSON.stringify(err));
+                }
+            });
+        }
+        // Event based functions *****************************************************************
+
+        function getNameEvent(txresult)
+        {
+            // THIS EVENT IS GOOD IF YOU WANT TO TRACK NAME EVENT WITHOUT RECALLING IT AGAIN FROM THE FUNCTION
+            // IT WILL START MONITORING TILL YOU DO NOT CALL events.stopWatching(); FUNCTION.
+            var events = contract.NameEvent({},{fromBlock: 'latest', toBlock: 'pending' });
+            // watch for changes
+            events.watch(function(error, event){
+                if (!error) {
+
+                    if(event.transactionHash===txresult) {
+                      //  alert(event.args.name);
+                        console.log("W Correct transaction Transaction: " + JSON.stringify(event));
+                        events.stopWatching();
+                        setProgressBar(false);
+                        setTransactionStatus(txresult,"Completed");
+                        verifyPIIData(event.args.name,"Name ","user_name");
+                    }
+                    else {
+                        console.log("Old transaction: " + JSON.stringify(event));
+
+                        if($("#latest-transaction-status").text()!=="Completed") {
+
+                            console.debug("Initiating another try to get event ");
+
+                            setTimeout(function () {
+                                getNameEvent(txresult);
+                            }, 5000);
+                        }
+                    }
+                }
+                else
+                    console.log("W Other transaction error: " + JSON.stringify(error));
+            });
+
+            // TO GET THE NAME EVENT ONE TIME (But since events are coming bit slow so we need to check and compare the transaction type for the event)
+            /*
+            contract.NameEvent(async (error, event) => {
+                if (!error) {
+
+                    if(event.transactionHash===result) {
+                        alert(event.args.name);
+                        console.log("Correct transaction Transaction: " + JSON.stringify(event));
+                    }
+                    else
+                        console.log("Other transaction: " + JSON.stringify(event));
+                }
+                else
+                    console.log("NameEvent Error: "+error);
+            });*/
+        }
+
+
+        function getAgeEvent(txresult) {
+
+            var events = contract.AgeEvent({}, {fromBlock: 'latest', toBlock: 'pending'});
+            // watch for changes
+            events.watch(function (error, event) {
+                if (!error) {
+                    if (event.transactionHash === txresult) {
+                        //  alert(event.args.name);
+                        console.log("W Correct transaction Transaction: " + JSON.stringify(event));
+                        events.stopWatching();
+                        setProgressBar(false);
+                        setTransactionStatus(txresult, "Completed");
+                        verifyPIIData(event.args.age,"Age ","user_age");
+                    }
+                    else
+                    {
+                        console.log("Old transaction: " + JSON.stringify(event));
+                        if ($("#latest-transaction-status").text() !== "Completed") {
+                            console.debug("Initiating another try to get event ");
+                            setTimeout(function () {
+                                getAgeEvent(txresult);
+                            }, 5000);
+                        }
+                    }
+                }
+                else
+                    console.log("W Other transaction error: " + JSON.stringify(error));
+            });
+        }
+
+
+        function getHomeaddressEvent(txresult) {
+
+            var events = contract.AddressEvent({}, {fromBlock: 'latest', toBlock: 'pending'});
+            // watch for changes
+            events.watch(function (error, event) {
+                if (!error) {
+                    if (event.transactionHash === txresult) {
+                        //  alert(event.args.name);
+                        console.log("W Correct transaction Transaction: " + JSON.stringify(event));
+                        events.stopWatching();
+                        setProgressBar(false);
+                        setTransactionStatus(txresult, "Completed");
+                        verifyPIIData(event.args.homeaddress,"Homeaddress ","user_address");
+                    }
+                    else
+                    {
+                        console.log("Old transaction: " + JSON.stringify(event));
+                        if ($("#latest-transaction-status").text() !== "Completed") {
+                            console.debug("Initiating another try to get event ");
+                            setTimeout(function () {
+                                getHomeaddressEvent(txresult);
+                            }, 5000);
+                        }
+                    }
+                }
+                else
+                    console.log("W Other transaction error: " + JSON.stringify(error));
+            });
+        }
+
+
+        // PII Verification functions
+        function verifyPIIData(result,targetPII,inputControlId)
+        {
+            // since we are getting hashes so we must match with the hash of current user's pii data
+            let hashval = web3.sha3($("#"+inputControlId).val());
+
+            console.debug("result:"+result+" == "+"hashval:"+hashval);
+            if(result===hashval)
+            {
+                console.log("Successful result: "+result);
+                $("#message").text($("#"+inputControlId).val() +" "+ targetPII+" is verified.");
+                $("#message").removeClass("alert-danger");
+                $("#message").addClass("alert-success");
+
+                $("#"+inputControlId).prop("readonly", true);
+                $("#verification_msg_"+inputControlId).text("Verified").removeClass("small alert-danger").addClass("small alert-success");
+                $("#verify_"+inputControlId+"_data").hide();
+            }
+            else {
+                $("#message").text(targetPII+" is not verified");
+                $("#message").removeClass("alert-success");
+                $("#message").addClass("alert-danger");
+                $("#verification_msg_"+inputControlId).text("Un-Verified").removeClass("small alert-success").addClass("small alert-danger");
+            }
+        }
+
+
+        // HTML / CSS based functions *******************************************************************
+
+        function refreshWallet(contractAddress)
+        {
+         //   alert(contractAddress.length);
+
+            if(contractAddress==="0")
+                $("#wallet").val(web3.eth.defaultAccount);
+            else
+                $("#wallet").val(contractAddress);
+        }
+
+
+        function setTransactionStatus(tx,status)
+        {
+            if(status==="Completed") {
+                $("#latest-transaction-status").removeClass("alert-warning");
+                $("#latest-transaction-status").addClass("alert-success");
+                $("#latest-transaction").removeClass("alert-warning");
+                $("#latest-transaction").addClass("alert-success");
+
+            }
+            else
+            {
+                $("#latest-transaction-status").removeClass("alert-success");
+                $("#latest-transaction-status").addClass("alert-warning");
+                $("#latest-transaction").removeClass("alert-success");
+                $("#latest-transaction").addClass("alert-warning");
+            }
+
+            $("#latest-transaction-status").text(status);
+            $("#latest-transaction").text(tx);
+        }
+
+        function setProgressBar(run)
+        {
+            if(run)  $("#progress").show();
+            else  $("#progress").hide();
+        }
+
+        function resetVerification(inputControlId)
+        {
+            $("#PIIFORM").show();
+            $("#form_submit_msg").text('');
+
+            $("#"+inputControlId).prop("readonly", false);
+            $("#verification_msg_"+inputControlId).text("").removeClass("small alert-danger").removeClass("small alert-success");
+            $("#verify_"+inputControlId+"_data").show();
+            $("#ipfs_image_msg").text("");
+            $("#ipfsimage").hide();
+
+
+        }
+
+        function submitForm()
+        {
+
+
+            if(($("#verification_msg_user_age").text()==="Verified") &&
+                ($("#verification_msg_user_address").text()==="Verified") &&
+                ($("#verification_msg_user_name").text()==="Verified"))
+            {
+                $("#PIIFORM").hide();
+                $("#form_submit_msg").text("Congratulation! Your form is accepted because it is verified by the Authority and all attested PII data is recorded on this site").addClass("alert-success");
+            }
+            else
+                alert("Your form cannot be submitted since they are not attested and verified by the Authority Smart contract");
+
+        }
+
+
+    </script>
+
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+        <a  href="#page-top">DAPP By Farhan H Khan</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Verify PII</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="masthead bg-info text-white text-center">
+    <div >
+        <!-- Masthead Avatar Image -->
+        <img class=" mb-2" src="src/newtheme/img/farhan-logo.png" alt="" width="10%">
+
+        <!-- Masthead Heading -->
+        <h3 class=" text-uppercase mb-0">Pii Data VERIFICATION ON PUBLIC BLOCKCHAIN </h3>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <!-- Masthead Subheading -->
+        <p class=" font-weight-light">
+            A demo to show how a user can prove his Pii data on any third party DAPP. The third party DAPP will verify entered data on the authority's smart contract where user must call the function using his wallet.
+        </p>
+
+    </div>
+</header>
+
+
+
+<!-- Contact Section -->
+<section class="page-section" id="contact">
+    <div class="container">
+        <!-- Contact Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-success mb-0">Verify PII Data</h2>
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="small"> 3rd party application asking user to verify his PII Data by requesting to the Authority's Smart Contract </i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+
+        <!-- Contact Section Form -->
+        <div class="row">
+            <!-- Contract Address and Network Configuration : BEGIN -->
+            <div class="col-lg-5 mx-auto" style="background:#d4eaff;">
+                <div>
+                    <b>Network:</b> <span id="networktype" style="color: blue;"> Network Type </span>
+                    <div>
+                        <b>Authority PII Contract Address:</b>
+                        <input class="form-control" type="text" value="" id="contract-address" name="contract-address" readonly>
+                        <p class="small"> The AuthorityPII Contract is the main contract with functionality and storage. </p>
+                    </div>
+                    <div>
+                        <b>Authority Registry Contract Address:</b>
+                        <input class="form-control" type="text" value="" id="registry-contract-address" name="registry-contract-address" readonly>
+                        <input class="form-control" type="text" value="" id="registry-contract-ens" name="registry-contract-ens" readonly>
+                        <p class="small"> Registry contract contains the latest version of the AuthorityPII contract. For Truffle or Ganache make sure to add the AuthortyRegistry contract address in the JS code, this registry contract will bring you latest version of the AuthorityPII Contract. </p>
+                        <a href="https://app.ens.domains/name/piiauthority.eth" target="_blank"> ENS Name (Only Rospten supported) </a>
+                    </div>
+                </div>
+                <div>
+                    <b>Contract Owner:</b> <span id="contract-owner" style="color: blue;"> Contract owner address </span>
+                    <div>
+                        <p class="small"> Press the button to see if contract is working fine and giving owner address on return.</p>
+                        <button onclick="getContractOwner();"  type="button" class="btn btn-secondary btn-sm" id="refreshOwner">Call Contract for Contract Owner Address</button>
+                    </div>
+                    <br>
+                </div>
+                <div>
+                    <b>Wallet ( Auto detection from MetaMask)</b>
+                    <p class="small"> If you changed a wallet account on the MetaMask but it does not appear here then click referesh button to detect it again</p>
+                    <input class="form-control " name ="wallet" id="wallet" rows="5" placeholder="Account-Wallet" required="required" data-validation-required-message="Please enter a wallet." readonly/>
+                    <br>
+                    <button onclick="refreshWallet('0');"  type="button" class="btn btn-secondary btn-sm" id="refreshwallet">Refresh</button>
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <!-- Contract Address and Network Configuration : END -->
+
+            <!-- Contract Verification Result : BEGIN -->
+            <div class="col-lg-5 mx-auto" style="background:#ffebdc;">
+                <h4> Verification Form</h4>
+                <div>
+                    <b> Latest Transaction</b>
+                    <span id="latest-transaction-status" class="small alert-warning  font-weight-bold text-break" >Pending:</span>
+                    <span id="latest-transaction" class="small alert-warning font-weight-bold text-break" >
+                        0x00000000000000000000000000000000000000000000</span>
+                    <div id="progress">
+                        <img class="masthead-avatar mb-5" src="src/newtheme/img/stripe-loader.svg" alt="">
+                        <button onclick="getNameEvent($('#latest-transaction').text());"  type="button" class="btn btn-secondary btn-sm" id="refreshEvent">Referesh Pending Transaction</button>
+                        <p class="small alert-danger" > If you do not see transaction complete for more than 2 minute then click "Refresh Pending Transaction"</p>
+                    </div>
+                    <br>
+                    <b>Verification Result </b>: <span id="message"> Alerts </span>
+                    <p class="small" > If your PII Data gets verified by the authority then you will see the status as Verified or non-verified</p>
+
+                </div>
+<!--
+                <div class="control-group">
+                    <div class="form-group controls mb-0 pb-2">
+                        <label>Full Name</label>
+
+                        <select class="form-control" name="target" id="target"  placeholder="target" >
+                            <option value="">Select Option to Verify</option>
+                            <option value="name">Name</option>
+                            <option value="age">Age</option>
+                            <option value="address">Home Address</option>
+                        </select>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                -->
+
+                    <div class="control-group">
+                        <h5 id="form_submit_msg"></h5>
+                        <div class="form-group row" >
+                            <div class="col-xs-1 p-4 " >
+                                <div id="PIIFORM">
+                                    <!-- NAME INPUT START -->
+                                    <div class="input-group">
+                                         <span style="padding-right: 50px">Name</span>
+                                         <input class="form-control "  type="text" value="" id="user_name" name="user_name" >
+                                         <button onclick="sendRequest('name');"  type="button" class="btn btn-secondary btn-sm " id="verify_user_name_data">Verify</button>
+                                         <span id="verification_msg_user_name"></span>
+                                    </div>
+                                    <p class="small p-4 "> Click verified on your form </p>
+                                    <!-- NAME INPUT End -->
+
+                                    <!-- AGE INPUT START -->
+                                    <div class="input-group">
+                                        <span style="padding-right: 50px">Age</span>
+                                        <input class="form-control "  type="text" value="" id="user_age" name="user_age" >
+                                        <button onclick="sendRequest('age');"  type="button" class="btn btn-secondary btn-sm " id="verify_user_age_data">Verify</button>
+                                        <span id="verification_msg_user_age"></span>
+                                    </div>
+                                    <p class="small p-4"> Click verified on your form </p>
+                                    <!-- AGE INPUT END -->
+
+
+                                    <!-- ADDRESS INPUT START -->
+                                    <div class="input-group">
+                                        <span style="padding-right: 50px">Address</span>
+                                        <input class="form-control "  type="text" value="" id="user_address" name="user_address" >
+                                        <button onclick="sendRequest('address');"  type="button" class="btn btn-secondary btn-sm " id="verify_user_address_data">Verify</button>
+                                        <span id="verification_msg_user_address"></span>
+                                    </div>
+                                    <p class="small p-4"> Click verified on your form </p>
+                                    <!-- ADDRESS INPUT END -->
+
+                                    <!-- USER IMAGE START -->
+                                    <div>
+                                        <span style="padding-right: 50px">User Photo</span>
+                                        <img src="" id="ipfsimage" alt="test" width="100px" height="100px"/>
+                                        <button onclick="sendRequest('photo');"  type="button" class="btn btn-secondary btn-sm " id="verify_user_photo_data">Retrieve Photo</button>
+                                        <br><span id="ipfs_image_msg" class="small alert-success"></span>
+                                    </div>
+                                    <!-- USER IMAGE END -->
+                                </div>
+
+                                <div class="input-group pr-4 pt-3">
+                                    <div class="pr-4"> <button onclick="resetVerification('user_name');resetVerification('user_age');resetVerification('user_address');" type="button" class="btn btn-secondary btn-sm  " id="resetVerification">Reset</button> </div>
+                                    <button onclick="submitForm();"  type="button" class="btn btn-secondary btn-sm default-color7" id="submit_form">Submit Form</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <!--
+                    <div class="form-group">
+                        <button onclick="sendRequest();"  type="button" class="btn btn-secondary btn-xl" id="sendTransactionButton">Verify Now</button>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- loading the minified version -->
+<script src="https://unpkg.com/ipfs-http-client@39.0.2/dist/index.min.js" integrity="sha384-DUTAjqwwqxmoFuDozFeVvanWVA8QQBYyGSq4MQOlBxH03rqD4yyaSl43RQHU5E8d" crossorigin="anonymous"></script><!-- loading the human-readable (not minified) version -->
+<script src="https://unpkg.com/ipfs-http-client@39.0.2/dist/index.js" integrity="sha384-SbtgpGuHo4HmMg8ZeX2IrF1c4cDnmBTsW84gipxDCzeFhIZaisgrVQbn3WUQsd0e" crossorigin="anonymous"></script>
+
+<script>
+
+
+    function loadIPFSImage(validCID)
+    {
+        const ipfs = window.IpfsHttpClient('localhost', '5001');
+
+        if(typeof validCID === "undefined") //if no image was given then use a testing one
+            validCID = 'QmbZpqDWrS1DANritmkhAgjAKswwRStGaJwtNVbDaSc2mk'
+
+        ipfs.get(validCID, function (err, files)
+        {
+            if(err)
+            {
+                console.log("Error "+err);
+
+                if(err==="Failed to fetch");
+                alert("Check if IPFS daemon is running because it is "+err);
+
+                $("#ipfs_image_msg").text("Check if IPFS daemon is running ? "+err).addClass("alert-danger");
+
+                return;
+            }
+
+            files.forEach((file) => {
+                console.log(file.path);
+               // console.log(file.content.toString('utf8'));
+                var arrayBufferView = new Uint8Array( file.content );
+                var blob = new Blob( [ arrayBufferView ], { type: "image/png" } );
+                var urlCreator = window.URL || window.webkitURL;
+                var imageUrl = urlCreator.createObjectURL( blob );
+                var img = document.querySelector( "#ipfsimage" );
+                img.src = imageUrl;
+
+            })
+        })
+    }
+
+    //loadIPFSImage();
+
+    function loadLatestContractVersion()
+    {
+
+    }
+
+</script>
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+
+            <!-- Footer Location -->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Demo By</h4>
+                <p class="lead mb-0">Farhan Hameed Khan
+                </p>
+            </div>
+
+            <!--  -->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Around the Web</h4>
+                <a class="btn btn-outline-light btn-social mx-1" href="#">
+                    <i class="fab fa-fw fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#">
+                    <i class="fab fa-fw fa-twitter"></i>
+                </a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#">
+                    <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#">
+                    <i class="fab fa-fw fa-dribbble"></i>
+                </a>
+            </div>
+
+            <!-- Footer About Text -->
+            <div class="col-lg-4">
+                <h4 class="text-uppercase mb-4">About Identity Demo</h4>
+                <p class="lead mb-0">Free to use for demo purpose only
+                    <a href="https://ropsten.etherscan.io/address/0x87e832fd0abd6fc5274a8b3f0613c2b7a7da6b9d#code">My Public Smart Contract</a>.</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- Copyright Section -->
+<section class="copyright py-4 text-center text-white">
+    <div class="container">
+        <small>Copyright &copy; Farhan Hameed Khan 2019</small>
+    </div>
+</section>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+</body>
+
+</html>
