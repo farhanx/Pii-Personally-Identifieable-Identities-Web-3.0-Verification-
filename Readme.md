@@ -169,21 +169,28 @@ https://ropsten.etherscan.io/address/0xa3aa160c14fe9ed2978f986ce6be90cb2e5ff3aa
     
 **How to Run** 
 
-Step 1: Run the IPFS daemon 
+Step 0: Go to the AuthoritySpringApp and in the main function select which network you want to run (By default truffle is selected)
+
+            BlockchainConfig.RunBlockchainType = IdentityEthereumTransaction.ETHEREUM_TRUFFLE;//IdentityEthereumTransaction.ETHEREUM_ROSPOTEN ;//IdentityEthereumTransaction.ETHEREUM_TRUFFLE;//.ETHEREUM_GANACHE;//.ETHEREUM_TRUFFLE;//.ETHEREUM_ROSPOTEN;
+
+Step 1: Go to the resource folder in src/main and empty the contents of these files "smartcontract.properties" "smartcontract_registry.properties"
+
+
+Step 2: Run the IPFS daemon 
 
 `  > ipfs daemon
 `
 
-Step 2: Run Truffle console (For local test) and migrate all contracts.
+Step 3: Run Truffle console (For local test) and migrate all contracts.
 
 `  > truffle develop
 `
 `  > migrate
 ` 
 
-Step 3: Open IDEA IntelliJ and select ServersideAPP and then press Run on AuthoritySpringApp.
+Step 4: Open IDEA IntelliJ and select ServersideAPP and then press Run on AuthoritySpringApp.
 
-Step 4: Go to the URL : http://localhost:8090/
+Step 5: Go to the URL : http://localhost:8090/
 
 Step 6: Now you can add the PII Data. 
 

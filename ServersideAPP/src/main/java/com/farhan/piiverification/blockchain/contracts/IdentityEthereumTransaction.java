@@ -169,7 +169,7 @@ public class IdentityEthereumTransaction extends EthereumEngine implements Contr
     @Override
     public String insertInContract() {
 
-        getAddressfromEth();
+       // getAddressfromEth();
 
         hashAllData();
 
@@ -183,9 +183,12 @@ public class IdentityEthereumTransaction extends EthereumEngine implements Contr
             if(this.useHashData)
             {
                 //since all these were stright text therefore we will save hashes of the text but for photos we will just save cid without sha3
-                this.name_hash = web3a.web3Sha3(this.name_hash).send().getResult();
-                this.address_hash = web3a.web3Sha3(this.address_hash).send().getResult();
-                this.age_hash = web3a.web3Sha3(this.age_hash).send().getResult();
+                // for some reasons web3a is not returning proper hashed values instead returning null in Ethereum rospten network maybe infura is not supporting
+                if(this.ETHEREUM_TYP_NETWORK!=ETHEREUM_ROSPOTEN) {
+                    this.name_hash = web3a.web3Sha3(this.name_hash).send().getResult();
+                    this.address_hash = web3a.web3Sha3(this.address_hash).send().getResult();
+                    this.age_hash = web3a.web3Sha3(this.age_hash).send().getResult();
+                }
             }
 
             ContractGasProvider contractGasProvider = new DeployGasProvider();

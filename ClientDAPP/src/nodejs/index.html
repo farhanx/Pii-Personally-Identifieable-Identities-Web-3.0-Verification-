@@ -30,7 +30,7 @@
         {
             // If you deploy a new contract on truffle or ganache then make sure to change the "AuthorityRegistry" contract address
             // This contract must have one record which will point to the AuthorityPII contract for all kinds of operations and its version
-            return "0xe543f78dd8abefc9185c6dfa12ea79e7c63a3048";
+            return "0x88974e3cb89f6e91bcd90ca74677406e60b94371";
         }
 
         function getRosptenENS_RegistryContractAddress(provider)
@@ -430,7 +430,17 @@
         function verifyPIIData(result,targetPII,inputControlId)
         {
             // since we are getting hashes so we must match with the hash of current user's pii data
-            let hashval = web3.sha3($("#"+inputControlId).val());
+            // Since authority application Java api is not working properly for Ropsten network only therefore we need to filter ropsten
+            // data without web3.sha3
+
+            let hashval = $("#"+inputControlId).val();
+
+           // alert("alert"+hashval);
+
+            if($("#registry-contract-ens").val()!=="piiauthority.eth")
+                hashval = web3.sha3($("#"+inputControlId).val());
+
+           // alert("alert"+hashval);
 
             console.debug("result:"+result+" == "+"hashval:"+hashval);
             if(result===hashval)

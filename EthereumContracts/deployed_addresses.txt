@@ -15,3 +15,22 @@ ENS NAME: piiauthority.eth (The registry address is resolved on piiauthority.eth
 Direct Link: https://app.ens.domains/name/piiauthority.eth
 
 
+TEST ON ROPSTEN NETWORK THE USER PII DATA USING NODEJS DAPP CLIENTDAPP :
+-----------------------------------------------------------------------
+Run the client dapp and put following information and select the below wallet as a user account who will call to verify data.
+Use User account:
+Name: Farhan Khan
+Address: Riyadh
+Age: 37
+Wallet address: 0x14D772bA6832e25041C7eb1Fa4a687035d68C508
+Private Key:  12C9B3B4568E87C9C6EB4F72B44338E90FD4FA36974C919B1C02991D530B7624
+
+Note: - All these information is dummy and strictly for the test only
+
+TEST ON ROPSTEN NETWORK TO ENTER NEW USER PII DATA USING JAVA APPLICATION SERVERSIDEAPP :
+------------------------------------------------------------------------------------------
+USE FOLLOWING ACCOUNT :
+as an authority admin or owner
+Owner: 0x84d9e63Fc79cf5114F95aE09aAB760d594E3718B | PVTKey: E97F403B8F0408D6864171366FB5DE01662D60DA36098BC3A96B5184D9D0A22E
+
+
