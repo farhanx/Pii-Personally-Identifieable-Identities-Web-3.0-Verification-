@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ece8fe94-09ce-4728-a820-91bffb4fefa1" name="Default Changelist" comment="mail pho file removed">
+    <list default="true" id="ece8fe94-09ce-4728-a820-91bffb4fefa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientDAPP/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ClientDAPP/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EthereumContracts/deployed_addresses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EthereumContracts/deployed_addresses.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract_registry.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract_registry.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServersideAPP/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ServersideAPP/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/ServersideAPP/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,71 +28,24 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/SecurityRestriction.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EthereumContracts/design_pattern_desicions.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="-270" />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EthereumContracts/avoiding_common_attacks.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EthereumContracts/deployed_addresses.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/AuthoritySpringApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="212">
-                <caret line="196" column="16" lean-forward="true" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
+              <first_editor relative-caret-position="3528">
+                <caret line="196" column="16" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="442" column="13" selection-start-line="442" selection-start-column="13" selection-end-line="442" selection-end-column="13" />
+            <state relative-caret-position="-91">
+              <caret line="311" column="9" lean-forward="true" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -111,10 +59,63 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClientDAPP/Readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="234">
+                <caret line="75" column="79" lean-forward="true" selection-start-line="75" selection-start-column="79" selection-end-line="75" selection-end-column="79" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedPII.sol">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/Ownable.sol">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="27" column="29" selection-start-line="27" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="396">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#12352#12353#0" expanded="true" />
@@ -132,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract_registry.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -159,28 +160,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>discoverBlockchainNetwork</find>
-      <find>wallet</find>
-      <find>length</find>
-      <find>refreshWallet</find>
-      <find>For tr</find>
-      <find>mymodel</find>
-      <find>regis</find>
-      <find>getRegistryContractAddress</find>
-      <find>logo</find>
-      <find>Ethereum nam</find>
-      <find>ens</find>
-      <find>Ropste</find>
-      <find>load</find>
-      <find>saveRegistryContractDetailInProperty</find>
-      <find>connectBlockchainServer</find>
-      <find>contractaddress</find>
-      <find>getSmart</find>
-      <find>loadEthereumProperties</find>
       <find>this.authorityAddresses</find>
       <find>this.account</find>
       <find>ETHEREUM_TYP_NETWORK</find>
-      <find>loadContracts</find>
       <find>0x74DC431a15d82837ED637F63f5844DF68D5d3d00</find>
       <find>loadRosptenENSContractAddress</find>
       <find>0xa3aa160c14fe9ed2978f986ce6be90cb2e5ff3aa</find>
@@ -189,6 +171,25 @@
       <find>dae,</find>
       <find>getAddressfromEth</find>
       <find>compa</find>
+      <find>view</find>
+      <find>mod</find>
+      <find>mapping</find>
+      <find>UserData</find>
+      <find>identity_details</find>
+      <find>loadContracts</find>
+      <find>discoverBlockchainNetwork</find>
+      <find>contract</find>
+      <find>contract.</find>
+      <find>eth</find>
+      <find>fee</find>
+      <find>Read</find>
+      <find>block</find>
+      <find>total</find>
+      <find>ipf</find>
+      <find>IPFS</find>
+      <find>ipfsimage</find>
+      <find>removeClass</find>
+      <find>emit</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,7 +210,6 @@
         <option value="$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedPIIRelay.sol" />
         <option value="$PROJECT_DIR$/ServersideAPP/pom.xml" />
         <option value="$PROJECT_DIR$/EthereumContracts/src/test/relay_testing.js" />
-        <option value="$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedPII.sol" />
         <option value="$PROJECT_DIR$/EthereumContracts/src/test/fivetestcases.js" />
         <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/domains/UserIdentity.java" />
         <option value="$PROJECT_DIR$/EthereumContracts/src/migrations/4_deploy_registry.js" />
@@ -224,7 +224,6 @@
         <option value="$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract.properties" />
         <option value="$PROJECT_DIR$/ClientDAPP/src/nodejs/src/index.js" />
         <option value="$PROJECT_DIR$/EthereumContracts/Readme.md" />
-        <option value="$PROJECT_DIR$/ClientDAPP/Readme.md" />
         <option value="$PROJECT_DIR$/ServersideAPP/readme-farhan" />
         <option value="$PROJECT_DIR$/ServersideAPP/Readme.md" />
         <option value="$PROJECT_DIR$/LICENSE" />
@@ -234,13 +233,15 @@
         <option value="$PROJECT_DIR$/EthereumContracts/deployed_addresses.txt" />
         <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/AuthoritySpringApp.java" />
         <option value="$PROJECT_DIR$/Readme.md" />
+        <option value="$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedPII.sol" />
         <option value="$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html" />
+        <option value="$PROJECT_DIR$/ClientDAPP/Readme.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="210" />
-    <option name="y" value="75" />
+    <option name="x" value="-525" />
+    <option name="y" value="275" />
     <option name="width" value="3500" />
     <option name="height" value="1960" />
   </component>
@@ -251,7 +252,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,55 +262,52 @@
             <path>
               <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientDAPP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientDAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientDAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nodejs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientDAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
               <item name="EthereumContracts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
-              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
-              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="EthereumContracts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
-              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="EthereumContracts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
-              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
-              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="piiverification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
-              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="contracts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,7 +317,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572508612592" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573746487413" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -374,7 +371,11 @@
       <workItem from="1572040175583" duration="78142000" />
       <workItem from="1572374222820" duration="40624000" />
       <workItem from="1572500483801" duration="9000" />
-      <workItem from="1572500516068" duration="7235000" />
+      <workItem from="1572500516068" duration="7685000" />
+      <workItem from="1572625110116" duration="622000" />
+      <workItem from="1572678872359" duration="3764000" />
+      <workItem from="1572951404466" duration="21526000" />
+      <workItem from="1573543078005" duration="6345000" />
     </task>
     <task id="LOCAL-00001" summary="Readme file change">
       <created>1572466605084</created>
@@ -446,17 +447,23 @@
       <option name="project" value="LOCAL" />
       <updated>1572469039903</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Final commit for consensys">
+      <created>1572508648154</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1572508648154</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217740000" />
+    <option name="totallyTimeSpent" value="250447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23809524" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24413146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -466,13 +473,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.3493635" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966466" weight="0.3493635" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.26449788" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3437058" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.31117398" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50033534" side_tool="true" weight="0.2503536" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32956153" />
@@ -498,7 +505,8 @@
     <MESSAGE value="Readme file change" />
     <MESSAGE value="license addition" />
     <MESSAGE value="mail pho file removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="mail pho file removed" />
+    <MESSAGE value="Final commit for consensys" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final commit for consensys" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -608,16 +616,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EthereumContracts/src/test/relay_testing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/node_modules/ethjs-ens/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4">
@@ -757,18 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/AuthorizedPII_v1/AuthorizedPII.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2628">
@@ -794,23 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientDAPP/Readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="292">
-            <caret line="43" column="67" lean-forward="true" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="67" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -894,13 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedPII.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedRegistry.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1458">
@@ -925,7 +887,7 @@
     <entry file="file://$PROJECT_DIR$/EthereumContracts/design_pattern_desicions.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="-270" />
+          <first_editor />
           <second_editor />
         </state>
       </provider>
@@ -938,34 +900,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EthereumContracts/deployed_addresses.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/AuthoritySpringApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-end-line="29" />
+        <state relative-caret-position="288">
+          <caret line="28" column="17" selection-start-line="28" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="212">
-            <caret line="196" column="16" lean-forward="true" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
+          <first_editor relative-caret-position="3528">
+            <caret line="196" column="16" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EthereumContracts/deployed_addresses.txt">
+    <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/Ownable.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        <state relative-caret-position="486">
+          <caret line="27" column="29" selection-start-line="27" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="396">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#12352#12353#0" expanded="true" />
@@ -978,6 +947,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract_registry.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -985,17 +961,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract_registry.properties">
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="187">
+          <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientDAPP/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="234">
+            <caret line="75" column="79" lean-forward="true" selection-start-line="75" selection-start-column="79" selection-end-line="75" selection-end-column="79" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="442" column="13" selection-start-line="442" selection-start-column="13" selection-end-line="442" selection-end-column="13" />
+        <state relative-caret-position="-91">
+          <caret line="311" column="9" lean-forward="true" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1004,6 +1002,13 @@
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedPII.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
         </state>
       </provider>
     </entry>

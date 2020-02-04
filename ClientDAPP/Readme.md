@@ -73,6 +73,7 @@ so it is better before running ipfs daemon use the config command and set the co
 
 ` > ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin "[\"https://localhost:80\"]"
 `
+Here https://localhost:80\ is the DAPP which needs the access to the ipfs API. 
 
 2 - The main DAPP code is written in index.html file. The same html file has the web3 code and all releavent JS code for any transaction using MetaMask. 
 
