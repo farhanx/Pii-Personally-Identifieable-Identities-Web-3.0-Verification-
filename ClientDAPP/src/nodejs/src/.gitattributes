@@ -1,0 +1,6 @@
+* text=auto
+*.sol linguist-language=Solidity
+newtheme/* linguist-vendored
+static/* linguist-vendored
+templates/* linguist-vendored
+
