@@ -1,3 +1,16 @@
+/*
+ * Personally identifiable information (PII) Verification Platform (Prototype)
+ * @description This is the main spring biit application file.
+ *              The server APP is the "Authorty's APP" built in Java Spring technology using Maven depenency manager.
+ *              This project sole purpose is to allow the owner or the administrator to register any users with their
+ *              Full name, age , home address and photo along with the wallet address.
+ *
+ * @author Farhan Hameed Khan <farhankhan@blockchainsfalcon.com> | <farhanhbk@hotmail.com>
+ * @date 1-Oct-2019
+ * @version 1.1.0
+ * @link http://www.blockchainsfalcon.com
+ */
+
 package com.farhan.piiverification;
 
 import com.farhan.piiverification.blockchain.contracts.IdentityEthereumTransaction;

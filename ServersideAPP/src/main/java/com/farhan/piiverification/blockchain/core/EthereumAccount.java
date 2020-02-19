@@ -1,3 +1,14 @@
+/*
+ * Personally identifiable information (PII) Verification Platform (Prototype)
+ * @description This class provides account credential keys and functionalities like creation account, account
+ *              import or export in public and private keys.
+ *              E
+ * @author Farhan Hameed Khan <farhankhan@blockchainsfalcon.com> | <farhanhbk@hotmail.com>
+ * @date 1-Oct-2019
+ * @version 1.1.0
+ * @link http://www.blockchainsfalcon.com
+ */
+
 package com.farhan.piiverification.blockchain.core;
 
 import org.web3j.crypto.Credentials;

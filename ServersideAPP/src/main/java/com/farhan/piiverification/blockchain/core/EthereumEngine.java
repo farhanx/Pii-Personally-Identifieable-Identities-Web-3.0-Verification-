@@ -1,3 +1,13 @@
+/*
+ * Personally identifiable information (PII) Verification Platform (Prototype)
+ * @description This class handles the Ethereum based functionality by using web3J (Java class object)
+ *              This class helps in querying ethereum current block , connecting with ethereum ip or url etc.
+ * @author Farhan Hameed Khan <farhankhan@blockchainsfalcon.com> | <farhanhbk@hotmail.com>
+ * @date 1-Oct-2019
+ * @version 1.1.0
+ * @link http://www.blockchainsfalcon.com
+ */
+
 package com.farhan.piiverification.blockchain.core;
 
 import org.slf4j.Logger;

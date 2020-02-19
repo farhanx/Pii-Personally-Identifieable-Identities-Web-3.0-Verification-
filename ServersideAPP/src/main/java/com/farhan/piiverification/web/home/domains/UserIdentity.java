@@ -1,3 +1,11 @@
+/*
+ * Personally identifiable information (PII) Verification Platform (Prototype)
+ * @description class for user identity with user attributes
+ * @author Farhan Hameed Khan <farhankhan@blockchainsfalcon.com> | <farhanhbk@hotmail.com>
+ * @date 1-Oct-2019
+ * @version 1.1.0
+ * @link http://www.blockchainsfalcon.com
+ */
 package com.farhan.piiverification.web.home.domains;
 
 import org.springframework.web.multipart.MultipartFile;
