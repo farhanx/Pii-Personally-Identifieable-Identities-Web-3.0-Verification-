@@ -1,4 +1,33 @@
-<html>
+<!--
+
+ * Personally identifiable information (PII) Verification Platform (Prototype)
+ * @Description: This single file contain HTML code embedded with Javascript code
+
+            This client DAPP's purpose is to provide a client-side interface for the users who
+            want to verify their PII data. The application sends a query to the Smart contract on the
+            Ethereum network, and this query must be sent with the already registered user's account.
+            For example, if a wallet associated with the PII data of the user and it already exists on the
+            smart contract, then it returns verified data; otherwise, it rejects the data.
+
+            Therefore, clientside DAPP does a query or retrieve the data, but it has no permission to store
+            any new data on the smart contract. Or in other words, you could say this application allows any
+            user to query at the smart contract using his registered wallet through MetaMask.
+
+            The client DAPP sends the query to the contract by signing with the user's wallet keys, which gets
+            verifies at the smart contract. It checks if the registered user is intended to get verification
+            status on his provided PII attribute, for instance, name, address, or age.
+
+            If his name, age, or address is already registered on the smart contract along with his wallet,
+            then he would see the result as approved; otherwise, a verification status will be displayed.
+
+ * @author Farhan Hameed Khan <farhankhan@blockchainsfalcon.com> | <farhanhbk@hotmail.com>
+ * @date 1-Feb-2020
+ * @version 1.1.0
+ * @link http://www.blockchainsfalcon.com
+
+-->
+
+<html lang="en">
 <head>
         <title>Simple Identity Verification</title>
         <meta charset="utf-8">
@@ -33,7 +62,7 @@
             return "0x97F7bB18007807F35FBfA08aaA458E6Bf748f799";
         }
 
-        function getRosptenENS_RegistryContractAddress(provider)
+        function getRosptenENS_RegistryContractAddress()
         {
             // This is an under construction function , in future we will be getting address name from ENS
             // right now we are returning back registryContract manually
@@ -751,7 +780,7 @@
         const ipfs = window.IpfsHttpClient('localhost', '5001');
 
         if(typeof validCID === "undefined") //if no image was given then use a testing one
-            validCID = 'QmbZpqDWrS1DANritmkhAgjAKswwRStGaJwtNVbDaSc2mk'
+            validCID = 'QmbZpqDWrS1DANritmkhAgjAKswwRStGaJwtNVbDaSc2mk';
 
         ipfs.get(validCID, function (err, files)
         {
@@ -759,8 +788,8 @@
             {
                 console.log("Error "+err);
 
-                if(err==="Failed to fetch");
-                alert("Check if IPFS daemon is running because it is "+err);
+                if(err==="Failed to fetch")
+                    alert("Check if IPFS daemon is running because it is "+err);
 
                 $("#ipfs_image_msg").text("Check if IPFS daemon is running ? "+err).addClass("alert-danger");
 
@@ -781,12 +810,6 @@
         })
     }
 
-    //loadIPFSImage();
-
-    function loadLatestContractVersion()
-    {
-
-    }
 
 </script>
 <!-- Footer -->
