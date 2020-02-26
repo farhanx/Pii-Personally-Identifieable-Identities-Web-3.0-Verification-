@@ -1,5 +1,7 @@
 ## **Personally identifiable information (PII) Verification Platform**
 
+![](architecture.png)
+
 #### **Project Detail**
 
 **Description :** This project demonstrate that how a government or any super authority can utilize the ethereum blockchain for the attestation of citizen's PII data.
