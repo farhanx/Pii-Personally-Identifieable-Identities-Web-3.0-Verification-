@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ece8fe94-09ce-4728-a820-91bffb4fefa1" name="Default Changelist" comment="">
+    <list default="true" id="ece8fe94-09ce-4728-a820-91bffb4fefa1" name="Default Changelist" comment="commented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientDAPP/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ClientDAPP/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/ServersideAPP/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,92 +28,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="3528">
-                <caret line="196" column="16" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-91">
-              <caret line="311" column="9" lean-forward="true" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClientDAPP/Readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="234">
-                <caret line="75" column="79" lean-forward="true" selection-start-line="75" selection-start-column="79" selection-end-line="75" selection-end-column="79" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedPII.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/Ownable.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="29" selection-start-line="27" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="126">
+              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#12352#12353#0" expanded="true" />
@@ -130,19 +46,88 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract_registry.properties">
+        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/DeployGasProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="36">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract.properties">
+        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/AuthorizedRegistry/AuthorizedRegistry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+            <state relative-caret-position="210">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/controller/IdentityController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="2" column="76" selection-start-line="2" selection-start-column="76" selection-end-line="2" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/domains/UserIdentity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/config/BlockchainConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/services/IdentityService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/services/IdentityServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#4930#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/AuthorizedPII_v1/AuthorizedPII.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/BlockchainAccount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="7" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#644#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -199,8 +184,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ServersideAPP/src/main/resources/blockchain.config.properties" />
-        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/config/BlockchainConfig.java" />
-        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/AuthorizedPII_v1/AuthorizedPII.java" />
         <option value="$PROJECT_DIR$/ClientDAPP/src/nodejs/src/newtheme/css/freelancer.min.css" />
         <option value="$PROJECT_DIR$/ClientDAPP/src/nodejs/src/newtheme/css/freelancer.css" />
         <option value="$PROJECT_DIR$/EthereumContracts/src/contracts/RelayCaller.sol" />
@@ -211,14 +194,9 @@
         <option value="$PROJECT_DIR$/ServersideAPP/pom.xml" />
         <option value="$PROJECT_DIR$/EthereumContracts/src/test/relay_testing.js" />
         <option value="$PROJECT_DIR$/EthereumContracts/src/test/fivetestcases.js" />
-        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/domains/UserIdentity.java" />
         <option value="$PROJECT_DIR$/EthereumContracts/src/migrations/4_deploy_registry.js" />
         <option value="$PROJECT_DIR$/EthereumContracts/src/test/test_use_cases.js" />
         <option value="$PROJECT_DIR$/ServersideAPP/contract-wrapper-gen.cmd" />
-        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/ContractTransaction.java" />
-        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/services/IdentityService.java" />
-        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/services/IdentityServiceImpl.java" />
-        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/controller/IdentityController.java" />
         <option value="$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedRegistry.sol" />
         <option value="$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract_registry.properties" />
         <option value="$PROJECT_DIR$/ServersideAPP/src/main/resources/smartcontract.properties" />
@@ -229,13 +207,30 @@
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/ServersideAPP/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/ServersideAPP/src/main/resources/blockchain.ropsten.properties" />
-        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java" />
         <option value="$PROJECT_DIR$/EthereumContracts/deployed_addresses.txt" />
-        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/AuthoritySpringApp.java" />
         <option value="$PROJECT_DIR$/Readme.md" />
         <option value="$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedPII.sol" />
-        <option value="$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html" />
         <option value="$PROJECT_DIR$/ClientDAPP/Readme.md" />
+        <option value="$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/AuthoritySpringApp.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/Utilities/CryptoUtilities.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/Utilities/PropertiesIO.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/EthereumEngine.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/EthereumBlockRecord.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/EthereumAccount.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/ContractTransaction.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/Blockrecord.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/BlockchainEngine.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/BlockchainAccount.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/DeployGasProvider.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/AuthorizedPII_v1/AuthorizedPII.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/AuthorizedRegistry/AuthorizedRegistry.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/controller/IdentityController.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/domains/UserIdentity.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/config/BlockchainConfig.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/services/IdentityService.java" />
+        <option value="$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/services/IdentityServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -251,7 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,11 +297,78 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="contracts" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="piiverification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="piiverification" type="462c0819:PsiDirectoryNode" />
+              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="piiverification" type="462c0819:PsiDirectoryNode" />
+              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
+              <item name="contracts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="piiVerificationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="piiVerificationProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ServersideAPP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="piiverification" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,7 +378,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573746487413" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582109740169" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -376,6 +437,7 @@
       <workItem from="1572678872359" duration="3764000" />
       <workItem from="1572951404466" duration="21526000" />
       <workItem from="1573543078005" duration="6345000" />
+      <workItem from="1582107038240" duration="3026000" />
     </task>
     <task id="LOCAL-00001" summary="Readme file change">
       <created>1572466605084</created>
@@ -454,16 +516,38 @@
       <option name="project" value="LOCAL" />
       <updated>1572508648154</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commented">
+      <created>1582107922524</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1582107922524</updated>
+    </task>
+    <task id="LOCAL-00013" summary="commented">
+      <created>1582108045532</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582108045532</updated>
+    </task>
+    <task id="LOCAL-00014" summary="commented">
+      <created>1582109730885</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582109730885</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250447000" />
+    <option name="totallyTimeSpent" value="253473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24413146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24748491" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -479,10 +563,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.31117398" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.31117398" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50033534" side_tool="true" weight="0.2503536" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -506,38 +590,40 @@
     <MESSAGE value="license addition" />
     <MESSAGE value="mail pho file removed" />
     <MESSAGE value="Final commit for consensys" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final commit for consensys" />
+    <MESSAGE value="comments added" />
+    <MESSAGE value="commented" />
+    <option name="LAST_COMMIT_MESSAGE" value="commented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java</url>
-          <line>142</line>
+          <line>156</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java</url>
-          <line>196</line>
+          <line>210</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/services/IdentityServiceImpl.java</url>
-          <line>111</line>
+          <line>119</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/controller/IdentityController.java</url>
-          <line>58</line>
+          <line>67</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/controller/IdentityController.java</url>
-          <line>65</line>
+          <line>74</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
@@ -549,13 +635,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java</url>
-          <line>401</line>
+          <line>415</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java</url>
-          <line>171</line>
+          <line>185</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
@@ -616,98 +702,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/node_modules/ethjs-ens/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EthereumContracts/src/node_modules/web3-eth-ens/src/ENS.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/AuthorizedRegistry/AuthorizedRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="82" column="58" selection-start-line="82" selection-start-column="58" selection-end-line="82" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/EthereumEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/ipfs/java-ipfs-api/v1.2.2/java-ipfs-api-v1.2.2.jar!/io/ipfs/api/IPFS.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="294" column="73" selection-start-line="294" selection-start-column="73" selection-end-line="294" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar!/org/springframework/beans/factory/support/SimpleInstantiationStrategy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar!/org/springframework/beans/BeanUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/web3j/crypto/4.5.0/crypto-4.5.0.jar!/org/web3j/crypto/Credentials.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#547#548#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EthereumContracts/src/truffle-config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-727" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EthereumContracts/src/migrations/4_deploy_relay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/blockchain.ganache.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="94" column="21" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -755,13 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/AuthorizedPII_v1/AuthorizedPII.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2628">
-          <caret line="171" column="130" selection-start-line="171" selection-start-column="125" selection-end-line="171" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ServersideAPP/contract-wrapper-gen.cmd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -787,16 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/EthereumAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#613#614#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -849,20 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/controller/IdentityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/services/IdentityServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedRegistry.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1458">
@@ -907,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/AuthoritySpringApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="28" column="17" selection-start-line="28" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -924,26 +880,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ClientDAPP/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1350">
+            <caret line="75" column="79" selection-start-line="75" selection-start-column="79" selection-end-line="75" selection-end-column="79" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/Ownable.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="29" selection-start-line="27" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12352#12353#0" expanded="true" />
-            <element signature="e#12383#12384#0" expanded="true" />
-            <element signature="e#12419#12420#0" expanded="true" />
-            <element signature="e#12451#12452#0" expanded="true" />
-            <element signature="e#12490#12491#0" expanded="true" />
-            <element signature="e#12525#12526#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -961,6 +911,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedPII.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -973,42 +952,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClientDAPP/Readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="234">
-            <caret line="75" column="79" lean-forward="true" selection-start-line="75" selection-start-column="79" selection-end-line="75" selection-end-column="79" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/src/index.js">
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/AuthoritySpringApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientDAPP/src/nodejs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-91">
-          <caret line="311" column="9" lean-forward="true" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="9" />
+        <state>
+          <caret selection-end-line="11" selection-end-column="3" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#2804#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EthereumContracts/src/contracts/AuthorizedPII.sol">
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/Utilities/CryptoUtilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#2747#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/Utilities/PropertiesIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#3469#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/EthereumEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#4388#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/EthereumBlockRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/EthereumAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#1579#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/ContractTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" />
+          <folding>
+            <element signature="e#0#843#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/Blockrecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" />
+          <folding>
+            <element signature="e#0#537#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/BlockchainEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/core/BlockchainAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/IdentityEthereumTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12352#12353#0" expanded="true" />
+            <element signature="e#12383#12384#0" expanded="true" />
+            <element signature="e#12419#12420#0" expanded="true" />
+            <element signature="e#12451#12452#0" expanded="true" />
+            <element signature="e#12490#12491#0" expanded="true" />
+            <element signature="e#12525#12526#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/DeployGasProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/AuthorizedPII_v1/AuthorizedPII.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/blockchain/contracts/AuthorizedRegistry/AuthorizedRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/controller/IdentityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="2" column="76" selection-start-line="2" selection-start-column="76" selection-end-line="2" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/domains/UserIdentity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/config/BlockchainConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/services/IdentityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServersideAPP/src/main/java/com/farhan/piiverification/web/home/services/IdentityServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#4930#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
