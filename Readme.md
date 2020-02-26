@@ -1,4 +1,4 @@
-## **Personally identifiable information (PII) Verification Platform**
+## **Decentralized Personally identifiable information (PII) Verification Platform**
 
 ![](architecture.png)
 
