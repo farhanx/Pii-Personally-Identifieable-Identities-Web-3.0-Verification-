@@ -4,7 +4,7 @@
 
 #### **Project Detail**
 
-**Description :** This project demonstrate that how a government or any super authority can utilize the ethereum blockchain for the attestation of citizen's PII data.
+**Description :** This project demonstrate  layer 1 network in Web3 application. Where I introduced the use of smart that how a government or any super authority can utilize the ethereum blockchain for the attestation of citizen's PII data.
 In the current world, it is not possible that a 3rd-party website can verify a user's PII data from a trustworthy resource online. Therefore, there is considerable data that lives in several databases, which can be termed as fake or wrong. Simply because, till now, we did not have any facility exist which could be used to verify user data from a governance authority within a few minutes or seconds. Though, there were some attempts where a government entity or authority can provide APIs to selected departments or 3rd-parties for the same purpose.
 
 However, this can be called a bad idea because of the following points: 
